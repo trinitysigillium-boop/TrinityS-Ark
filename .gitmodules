@@ -1,0 +1,9 @@
+[submodule "AspNetCore.Docs"]
+	path = AspNetCore.Docs
+	url = https://github.com/dotnet/AspNetCore.Docs
+[submodule "termux-api"]
+	path = termux-api
+	url = https://github.com/termux/termux-api
+[submodule "termux-app"]
+	path = termux-app
+	url = https://github.com/termux/termux-app

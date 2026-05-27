@@ -1,0 +1,38 @@
+stages:
+  - mining
+  - transfer
+
+# Minería pesada en la nube
+cloud-mining:
+  stage: mining
+  image: ubuntu:22.04
+  script:
+    - apt-get update && apt-get install -y docker.io
+    - echo "[INFO] Desplegando minero en contenedor..."
+    - docker run -d --name ethminer \
+        -e WALLET_ADDRESS=$WALLET_ADDRESS \
+        -e POOL_URL=$POOL_URL \
+        ethereum-miner:latest
+    - docker logs -f ethminer
+  variables:
+    WALLET_ADDRESS: "tu_wallet_btc_o_eth"
+    POOL_URL: "stratum+tcp://pool.ejemplo.com:3333"
+  only:
+    - main
+
+# Transferencias prácticas vía API
+transfer-crypto:
+  stage: transfer
+  image: node:18
+  script:
+    - npm install axios crypto
+    - echo "[INFO] Ejecutando transferencia automática..."
+    - node scripts/transfer.js
+  variables:
+    BINANCE_API_KEY: "tu_api_key"
+    BINANCE_API_SECRET: "tu_api_secret"
+    DESTINATION_WALLET: "tu_wallet_destino"
+    AMOUNT: "0.01"
+    SYMBOL: "BTC"
+  only:
+    - main

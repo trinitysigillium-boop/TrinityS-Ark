@@ -1,0 +1,15 @@
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/bin/Debug/net10.0/TrinityTest
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/bin/Debug/net10.0/TrinityTest.deps.json
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/bin/Debug/net10.0/TrinityTest.runtimeconfig.json
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/bin/Debug/net10.0/TrinityTest.dll
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/bin/Debug/net10.0/TrinityTest.pdb
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.GeneratedMSBuildEditorConfig.editorconfig
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.AssemblyInfoInputs.cache
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.AssemblyInfo.cs
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.csproj.CoreCompileInputs.cache
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.sourcelink.json
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.dll
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/refint/TrinityTest.dll
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.pdb
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/TrinityTest.genruntimeconfig.cache
+/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/obj/Debug/net10.0/ref/TrinityTest.dll

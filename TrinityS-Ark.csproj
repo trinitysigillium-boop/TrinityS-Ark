@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Dependencias necesarias -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Excluir ejemplos y documentación que no forman parte del proyecto -->
+    <Compile Remove="AspNetCore.Docs/**/*.cs" />
+    <Compile Remove="tests/**/*.cs" />
+    <Compile Remove="docker/**/*.cs" />
+    <Compile Remove="mq/**/*.cs" />
+    <Compile Remove="monitoring/**/*.cs" />
+    <Compile Remove="termux-api/**/*.cs" />
+    <Compile Remove="termux-app/**/*.cs" />
+    <Compile Remove="**/samples_snapshot/**/*.cs" />
+    <Compile Remove="**/samples/**/*.cs" />
+    <Compile Remove="**/examples/**/*.cs" />
+  </ItemGroup>
+
+</Project>
+

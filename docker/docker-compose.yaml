@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  api:
+    build: ./docker
+    ports:
+      - "3000:3000"
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: trinity
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: trinitydb
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"

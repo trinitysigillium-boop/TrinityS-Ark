@@ -1,0 +1,47 @@
+// Infraestructura/Redis/RedisConnectionFactory.cs
+using StackExchange.Redis;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Security;
+
+namespace TrinitySArk.Infraestructura.Redis;
+
+public class RedisConnectionFactory
+{
+    private static Lazy<ConnectionMultiplexer>? _lazyConnection;
+
+    public static ConnectionMultiplexer GetConnection(string host, int port, string password, string caCertificatePath)
+    {
+        if (_lazyConnection == null)
+        {
+            var config = new ConfigurationOptions
+            {
+                EndPoints = { { host, port } },
+                Password = password,
+                Ssl = true,
+                AbortOnConnectFail = false,
+                ConnectTimeout = 5000,
+                SyncTimeout = 5000
+            };
+
+            // Interceptamos la validación SSL para inyectar nuestra CA privada de la instancia MP5J04Z2
+            config.CertificateValidation += (sender, certificate, chain, sslPolicyErrors) =>
+            {
+                if (sslPolicyErrors == SslPolicyErrors.None) return true;
+
+                var customChain = new X509Chain();
+                customChain.ChainStatusList.Append(new X509ChainStatus { Status = X509ChainStatusFlags.UntrustedRoot });
+                customChain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
+                
+                // Cargamos el certificado de la CA configurada en Ohio
+                customChain.ChainPolicy.ExtraStore.Add(new X509Certificate2(caCertificatePath));
+                
+                var element = new X509Certificate2(certificate);
+                return customChain.Build(element);
+            };
+
+            _lazyConnection = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(config));
+        }
+        
+        return _lazyConnection.Value;
+    }
+}

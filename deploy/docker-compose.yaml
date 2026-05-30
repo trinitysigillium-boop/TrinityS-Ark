@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  api:
+    image: trinitys-api:latest
+    build:
+      context: ../api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    profiles: ["dev", "prod"]
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: trinity
+      POSTGRES_PASSWORD: secret123
+      POSTGRES_DB: trinitys
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    profiles: ["dev", "prod"]
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    profiles: ["dev", "prod"]
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    profiles: ["monitoring"]
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    profiles: ["monitoring"]
+
+  bot-fintech:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./bots:/app
+    command: ["node", "fintech-bot.js"]
+    profiles: ["bots"]
+
+  bot-chat:
+    image: python:3.11-alpine
+    working_dir: /app
+    volumes:
+      - ./bots:/app
+    command: ["python", "chatbot.py"]
+    profiles: ["bots"]
+
+volumes:
+  db_data:
+

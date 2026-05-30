@@ -1,0 +1,81 @@
+Fecha: Wed May 27 11:03:08 CST 2026
+.NET SDK:
+ Version:           10.0.108
+ Commit:            94ea82652c
+ Workload version:  10.0.100-manifests.b47d7e23
+ MSBuild version:   18.0.11
+
+Runtime Environment:
+ OS Name:     Linux
+ OS Version:  
+ OS Platform: Linux
+ RID:         linux-bionic-arm64
+ Base Path:   /data/data/com.termux/files/usr/lib/dotnet/sdk/10.0.108/
+
+.NET workloads installed:
+There are no installed workloads to display.
+Configured to use workload sets when installing new manifests.
+No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+
+Host:
+  Version:      10.0.8
+  Architecture: arm64
+  Commit:       94ea82652c
+
+.NET SDKs installed:
+  10.0.108 [/data/data/com.termux/files/usr/lib/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 10.0.8 [/data/data/com.termux/files/usr/lib/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 10.0.8 [/data/data/com.termux/files/usr/lib/dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  DOTNET_BUNDLE_EXTRACT_BASE_DIR           [/data/data/com.termux/files/home/.cache/dotnet_bundle_extract]
+  DOTNET_ROOT                              [/data/data/com.termux/files/usr/lib/dotnet]
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+total 165K
+drwx------.  6 u0_a319 u0_a319 3.5K May 14 09:43 AspNetCore.Docs
+drwx------.  2 u0_a319 u0_a319 3.5K May 19 07:42 MSBuild_Logs
+-rw-------.  1 u0_a319 u0_a319 4.7K May 19 08:03 Program.cs
+drwx------.  2 u0_a319 u0_a319 3.5K May 19 08:00 Properties
+-rw-------.  1 u0_a319 u0_a319  162 May 14 23:49 README.md
+-rw-------.  1 u0_a319 u0_a319  360 May 19 08:03 TrinityS-Ark.csproj
+-rw-------.  1 u0_a319 u0_a319  131 May 19 08:00 TrinityS-Ark.http
+-rw-------.  1 u0_a319 u0_a319  22K May 19 08:09 api.log
+-rw-------.  1 u0_a319 u0_a319  119 May 19 08:00 appsettings.Development.json
+-rw-------.  1 u0_a319 u0_a319  355 May 19 08:03 appsettings.json
+drwx------.  4 u0_a319 u0_a319 3.5K May 22 02:25 bin
+-rw-------.  1 u0_a319 u0_a319  806 May 19 07:42 build_diagnostico.log
+-rw-------.  1 u0_a319 u0_a319 1.9K May 19 07:30 couldflare c9nection
+-rw-------.  1 u0_a319 u0_a319 1.4K May 27 11:03 dashboard-trinitys.log
+drwx------.  2 u0_a319 u0_a319 3.5K May 14 23:49 db
+-rw-------.  1 u0_a319 u0_a319   94 May 19 08:04 dependencias.props
+drwx------.  2 u0_a319 u0_a319 3.5K May 19 16:45 deploy
+drwx------.  2 u0_a319 u0_a319 3.5K May 14 23:49 docker
+-rw-------.  1 u0_a319 u0_a319   14 May 14 11:00 fix-termux-mirrors.sh
+drwx------.  2 u0_a319 u0_a319 3.5K May 14 23:49 k8s
+drwx------.  2 u0_a319 u0_a319 3.5K May 14 23:49 monitoring
+drwx------.  2 u0_a319 u0_a319 3.5K May 14 23:49 mq
+drwx------. 38 u0_a319 u0_a319 3.5K May 19 07:10 node_modules
+drwx------.  4 u0_a319 u0_a319 3.5K May 22 02:25 obj
+-rw-------.  1 u0_a319 u0_a319  16K May 27 10:58 package-lock.json
+-rw-------.  1 u0_a319 u0_a319   55 May 19 07:10 package.json
+-rw-------.  1 u0_a319 u0_a319  831 May 19 05:24 repos-check.sh
+-rw-------.  1 u0_a319 u0_a319   14 May 14 11:04 setup-mirrors.sh
+drwx------.  6 u0_a319 u0_a319 3.5K May 14 09:36 termux-api
+drwx------. 13 u0_a319 u0_a319 3.5K May 14 09:36 termux-app
+drwx------.  2 u0_a319 u0_a319 3.5K May 14 23:49 tests
+-rw-------.  1 u0_a319 u0_a319  352 May 14 10:37 trinitys-git-check.sh
+-rwx------.  1 u0_a319 u0_a319  497 May 14 10:04 trinitys-ssh-fix.sh
+-rw-------.  1 u0_a319 u0_a319 1.4K May 19 08:03 wsFeeder.js

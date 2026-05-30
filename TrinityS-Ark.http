@@ -1,0 +1,6 @@
+@TrinityS_Ark_HostAddress = http://localhost:5087
+
+GET {{TrinityS_Ark_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

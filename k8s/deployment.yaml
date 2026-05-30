@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trinity-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: trinity-api
+  template:
+    metadata:
+      labels:
+        app: trinity-api
+    spec:
+      containers:
+      - name: trinity-api
+        image: trinitys-api:latest
+        ports:
+        - containerPort: 3000

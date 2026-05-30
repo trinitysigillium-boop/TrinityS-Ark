@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2OxSil0PLOc=",
+  "success": true,
+  "projectFilePath": "/data/data/com.termux/files/home/TrinityS-Ark/TrinityTest/TrinityApi/TrinityApi.csproj",
+  "expectedPackageFiles": [
+    "/data/data/com.termux/files/home/.nuget/packages/microsoft.aspnetcore.openapi/10.0.8/microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
+    "/data/data/com.termux/files/home/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
